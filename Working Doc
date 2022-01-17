@@ -1,0 +1,15 @@
+Requirements:
+Determine suitable MPPT for 1P and 3P
+
+Constraints:
+1P has limited capacity due to the size of the solar panels. Based on Sanosat-1 and other 1P Pocketqubes, the output per panel has the following limits:
+ - Panel output approx 350mW max
+ - Panel voltage under 5V
+ - Current per panel of approx 150mA
+ 
+ 3P with body mounted solar panels has much larger surface area. PocketQubes like Delfi-PQ have 2 x Azurspace 8x4cm 30% efficient solar cells. Each cell is approx 1.2W, and can either be wired
+ in series or parallel. Either 2.4V or 4.8V (MPPT) and peak voltage of 2.7 or 5.4v. Current would range from .5A to 1A. 
+ Lower cost panels would generally have specifications below the space-grade solar cells. 
+ The 3P MPPT would need to have this minimum capacity. 
+ 
+ 
