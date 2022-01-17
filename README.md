@@ -1,5 +1,4 @@
 # Selection of MPPT Chip
-Jiten Thapa, ORION Space Pvt. Ltd \
 Date: 16 Jan, 2022
 
 Due to chip shortage due to the COVID 19 Pandemeic we have to have many options regarding the chips we are using in our system. Currently in the beginning of 2022 we are facing same issue and we want to have an option to the MPPT chip that we are currently using.
@@ -76,6 +75,58 @@ This chip will charge a 1-cell Li-ion battery and stop after the charging has be
 ## Recomendation
 1. Option-1: Use LTC3105
 2. Option-2: Use L6920 and MCP73831T
+
+# Comments from Stuart
+
+## Requirements:
+Determine suitable MPPT for 1P and 3P
+
+## Constraints:
+1P has limited capacity due to the size of the solar panels. Based on Sanosat-1 and other 1P Pocketqubes, the output per panel has the following limits:
+ - Panel output approx 350mW max
+ - Panel voltage under 5V
+ - Current per panel of approx 150mA ( depends on solar cell voltage)
+ 
+3P with body mounted solar panels has much larger surface area. PocketQubes like Delfi-PQ have 2 x Azurspace 8x4cm 30% efficient solar cells. Each cell is approx 1.2W, and can either be wired
+ in series or parallel. Either 2.4V or 4.8V (MPPT) and peak voltage of 2.7 or 5.4v. Current would range from .5A to 1A. 
+ Lower cost panels would generally have specifications below the space-grade solar cells. 
+ The 3P MPPT would need to have this minimum capacity. 
+ 
+ 
+ ## Discussion:
+ 1P Options
+ These option have already been identified:
+ SPV1040
+ LTC3105
+ SPV1050
+ ADP5090
+ 
+ Many MPPT chips fall within the "Energy Harvesting" category. These are designed for very small circuits, so the IC's often have limitations when used on PQ application.
+ 
+ eg. ADP5090 can only support max 3.3v input and 200mW capacity. SPV1050 only support a max current of 70mA. 
+ 
+ A typical 1P radio has a 100mW transmitter and requires 280mW of DC power. At 3.3v, this is 85mA. The EPS of the satellite would need to separate the power generation and discharge so that 
+ too much current isn't drawn from a single panel ( which would cause a brown-out)
+ 
+ Some additional options for 1P, along with notes about the device:
+ 
+## MAXIM MAX20361
+ Suppots up to 3v input ( although recommended is 2.5v). approx 300mW capacity. I2C control ( less external components required). WLCSP package hard to solder and expensive PCB. 
+ 
+## E-PEAS AEM10941
+ 0.38-5V input. max input current of 110mA, but 550mW input power handling ( so better to have higher voltage solar panels). More complicated chip so more external components required. 
+ 
+ Some additional options for 3P, along with notes about the device:
+ 
+ ## Analog Devices LTC3119
+ 2.5-18v input V. MAx 15W capacity, so lots of headroom. Much larger chip. Used on Birds Cubesats from Japan. 
+ 
+ ## Analog Devices LTC3130-1
+ Similar power capacity to SPV1040 but higher voltages. 2.4-25v input. Buck-Boost converter, not just boost. 600mA output curent limit.
+ 
+ ## Texas Instruments TPS61200
+ plain old Boost converter. 0.5 - 5.5v. No MPPT......BUT..... TI published a design note https://www.ti.com/lit/an/slva345b/slva345b.pdf to add MPP functionality. 
+ 3W output. Same capacity as SPV1040. Smaller package, but additional components required for MPP functionality. 
 ## References
 - SPV1040 Datasheet
 -  *https://www.st.com/en/power-management/energy-harvesting-and-solar-charging-ics.html#overview
