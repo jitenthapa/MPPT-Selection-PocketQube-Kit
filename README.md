@@ -112,21 +112,24 @@ Determine suitable MPPT for 1P and 3P
  
 ## MAXIM MAX20361
  Suppots up to 3v input ( although recommended is 2.5v). approx 300mW capacity. I2C control ( less external components required). WLCSP package hard to solder and expensive PCB. 
- 
+ Datasheet: https://datasheets.maximintegrated.com/en/ds/MAX20361.pdf
 ## E-PEAS AEM10941
  0.38-5V input. max input current of 110mA, but 550mW input power handling ( so better to have higher voltage solar panels). More complicated chip so more external components required. 
+ Datasheet: https://www.fujitsu.com/uk/Images/DS_AEM10941_REV1.2.pdf
  
  Some additional options for 3P, along with notes about the device:
  
  ## Analog Devices LTC3119
  2.5-18v input V. MAx 15W capacity, so lots of headroom. Much larger chip. Used on Birds Cubesats from Japan. 
- 
+ Datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/3119fb.pdf
  ## Analog Devices LTC3130-1
  Similar power capacity to SPV1040 but higher voltages. 2.4-25v input. Buck-Boost converter, not just boost. 600mA output curent limit.
+ Datasheet: https://www.analog.com/media/en/technical-documentation/data-sheets/3119fb.pdf
  
  ## Texas Instruments TPS61200
  plain old Boost converter. 0.5 - 5.5v. No MPPT......BUT..... TI published a design note https://www.ti.com/lit/an/slva345b/slva345b.pdf to add MPP functionality. 
  3W output. Same capacity as SPV1040. Smaller package, but additional components required for MPP functionality. 
+ Datasheet: https://www.sparkfun.com/datasheets/Prototyping/tps61200.pdf
 ## References
 - SPV1040 Datasheet
 -  *https://www.st.com/en/power-management/energy-harvesting-and-solar-charging-ics.html#overview
