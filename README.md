@@ -130,6 +130,18 @@ Determine suitable MPPT for 1P and 3P
  plain old Boost converter. 0.5 - 5.5v. No MPPT......BUT..... TI published a design note https://www.ti.com/lit/an/slva345b/slva345b.pdf to add MPP functionality. 
  3W output. Same capacity as SPV1040. Smaller package, but additional components required for MPP functionality. 
  Datasheet: https://www.sparkfun.com/datasheets/Prototyping/tps61200.pdf
+
+ ## Comparision Table
+
+| Parameters                |   MAX20361         | AEM10941               | LTC3119 |          LTC3130-1 |TPS61200 |
+| -----------               | -----------      |-----------            | ------------ |------------ |------------ |
+| Input Voltage Range [V]   | 225mV to 2.5V        |50mV-5V                 | 2.5-18 |2.4-24|0.3-5.5
+| Package                | 12-WLP              | QFN-28                    | QFN-28 |UDC, MSE |VSON-10
+| Uses MPPT?                | Yes              | Yes                   | No |No | Can Be |
+| Price[$]                  | 4.61 Euro [Mouser]           | 6.46 Euro               | 14.67Euro [mouser] |8.68 Euro [mouser] |$2.94 [digikey]
+| Availability **              | available in mouser             |    available in mouser            | mouser |available in mouser   |aliexpress|
+
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOnRydWUsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjp0cnVlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjp0cnVlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0)
 ## References
 - SPV1040 Datasheet
 -  *https://www.st.com/en/power-management/energy-harvesting-and-solar-charging-ics.html#overview
