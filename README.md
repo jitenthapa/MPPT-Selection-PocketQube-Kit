@@ -46,6 +46,20 @@ The board has been tested and the results are as follows:
 In this we orderd a board from dfrobot that uses SPV105 and evaluated that board.
 ![](images/spv1050-dfrobot.jpg)
 
+### 2.1 Simple Measurement
+The experiment was done by Mr. Abiral Bhandari. \
+[![](https://mermaid.ink/img/eyJjb2RlIjoiXG4gICAgZmxvd2NoYXJ0IExSXG4gICAgVmFyaWFibGVfUG93ZXJfU3VwcGx5IC0tPiBTUFYxMDUwIC0tPiBPdXRwdXQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiXG4gICAgZmxvd2NoYXJ0IExSXG4gICAgVmFyaWFibGVfUG93ZXJfU3VwcGx5IC0tPiBTUFYxMDUwIC0tPiBPdXRwdXQiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)
+
+| Input Voltage [v]               | Output Voltage [v]         | 
+| -----------               | -----------               |
+| 1             | 4.13          | 
+| 1.5            | 4.14          | 
+| 2            | 4.14          | 
+| 2.5            | 4.14          | 
+| 3            | 4.15         | 
+| 3.5           | 4.15         | 
+| 4            | 4.17         | 
+
 ## Boost Converters
 To convert the 2V from the solar panel we can also use boost converter. Here we try to find the high efficient boost converter which can be paired with a battery charger that charges the battery in the EPS board.
 | Parameters                | L6920          | 
@@ -141,7 +155,7 @@ Determine suitable MPPT for 1P and 3P
 | Price[$]                  | 4.61 Euro [Mouser]           | 6.46 Euro               | 14.67Euro [mouser] |8.68 Euro [mouser] |$2.94 [digikey]
 | Availability **              | available in mouser             |    available in mouser            | mouser |available in mouser   |aliexpress|
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOnRydWUsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjp0cnVlfQ)](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZ3JhcGggVERcbiAgICBBW0hhcmRdIC0tPnxUZXh0fCBCKFJvdW5kKVxuICAgIEIgLS0-IEN7RGVjaXNpb259XG4gICAgQyAtLT58T25lfCBEW1Jlc3VsdCAxXVxuICAgIEMgLS0-fFR3b3wgRVtSZXN1bHQgMl0iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjp0cnVlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0)
+
 ## References
 - SPV1040 Datasheet
 -  *https://www.st.com/en/power-management/energy-harvesting-and-solar-charging-ics.html#overview
